@@ -1,20 +1,32 @@
 #!/bin/bash
 
-echo "workin"
-# Collect mounted free disk space
-df -h >> system_info.txt
+{
+    echo "################ Fetch Free Disk Space ##################"
+    # Collect mounted free disk space
+    df -h
 
-# Collect running processes
-ps aux >> system_info.txt
+    echo ""
+    echo "################ Running Processes ##################"
+    # Collect running processes
+    ps aux
 
-# Collect current CPU usage
-top -n 1 -b >> system_info.txt
+    echo ""
+    echo "################ Current CPU Usage ##################"
+    # Collect current CPU usage
+    top -n 1 -b
 
-# Collect free and used memory
-free -m >> system_info.txt
+    echo ""
+    echo "################ Free and Used Memory ##################"
+    # Collect free and used memory
+    free -m
 
-# List RPM packages installed
-rpm -qa >> system_info.txt
+    echo ""
+    echo "################ RPM Packages Installed ##################"
+    # List RPM packages installed
+    rpm -qa
 
-# Print system information
-uname -a >> system_info.txt
+    echo ""
+    echo "################ System Information ##################"
+    # Print system information
+    uname -a
+} > system_info.txt
