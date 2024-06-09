@@ -22,6 +22,10 @@
     free -m
 
     echo ""
+    echo "================ Detailed Memory Information ================"
+    vmstat -s
+
+    echo ""
     echo "================ RPM Packages Installed ================"
     # List RPM packages installed
     rpm -qa
