@@ -1,14 +1,14 @@
 #!/bin/bash
 
 {
-    echo "################ Fetch Free Disk Space ##################"
+    echo "################ Fetch Free Disk Space `date` ##################"
     # Collect mounted free disk space
     df -h
 
     echo ""
     echo "################ Running Processes ##################"
     # Collect running processes
-    ps aux
+    ps aux | grep fis001s
 
     echo ""
     echo "################ Current CPU Usage ##################"
