@@ -22,7 +22,7 @@
     free -m
 
     echo ""
-    echo "================ Detailed Memory Information ================"
+    echo "================ Detailed Memory, CPU activity Information ================"
     vmstat -s
 
     echo ""
