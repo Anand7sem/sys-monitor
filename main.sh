@@ -40,5 +40,8 @@
     # Print system information
     uname -a
 
+    echo ""
+    echo "=================Java Version======================"
+    java --version
     echo "================ END OF REPORT ================="
 } > system_info.txt
